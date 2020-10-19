@@ -15,8 +15,14 @@ lazy val root = (project in file(".")).
       "com.typesafe.akka" %% "akka-stream"              % akkaVersion,
       "ch.qos.logback"    % "logback-classic"           % "1.2.3",
 
+      "org.typelevel" %% "cats-core" % "2.1.1",
+      "com.lihaoyi" %% "scalatags" % "0.8.2",
+
       "com.typesafe.akka" %% "akka-http-testkit"        % akkaHttpVersion % Test,
       "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaVersion     % Test,
+
+      
+
       "org.scalatest"     %% "scalatest"                % "3.0.8"         % Test
     )
   ).enablePlugins(JavaAppPackaging)

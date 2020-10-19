@@ -31,12 +31,12 @@ object QuickstartApp {
 
       implicit val system = context.system
 
-      val userRoutes = new UserRoutes(userRegistryActor) 
+      val userRoutes   = new UserRoutes(userRegistryActor)
       val healthRoutes = new HealthRoutes()
-      
-      val routes =  healthRoutes.routes ~ userRoutes.routes
 
-      startHttpServer(routes)(context.system)
+      val routes = healthRoutes.routes ~ userRoutes.routes
+
+      startHttpServer(routes)
 
       Behaviors.empty
     }
