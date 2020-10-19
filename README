@@ -1,0 +1,11 @@
+# benchmark
+hey -z 10s http://localhost:8080/users
+
+Requests/sec:	127767.5068
+
+
+# create user
+curl --header "Content-Type: application/json" --request POST --data '{"name":"john", "age": 44, "countryOfResidence": "USA"}' http://localhost:8080/users
+
+# delete
+curl -X DELETE http://localhost:8080/users/john
