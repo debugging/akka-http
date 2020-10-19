@@ -19,4 +19,9 @@ lazy val root = (project in file(".")).
       "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaVersion     % Test,
       "org.scalatest"     %% "scalatest"                % "3.0.8"         % Test
     )
-  )
+  ).enablePlugins(JavaAppPackaging)
+
+
+addCommandAlias("c", "compile")
+addCommandAlias("cc", "~compile")
+addCommandAlias("r", "reload")  
